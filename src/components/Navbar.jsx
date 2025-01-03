@@ -4,16 +4,16 @@ import '../styles/Navbar.css';
 import logo from '../assets/images/logo.PNG'; 
 import { Link } from 'react-router-dom';
 import {CartContext} from '../Features/ContextProvider';
-
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const  Navbar = () => {
 const {cart} = useContext(CartContext)
   return (
    
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary ms-auto">
 
 
-  <div class="container-fluid">
+  <div class="container-fluid ms-auto">
     <Link class="navbar-brand" to="/">
     <img
             src={logo}
@@ -24,18 +24,23 @@ const {cart} = useContext(CartContext)
           />
         
     </Link>
-
-    <Link to="/cart" 
-    className='navbar-link fs-5 text-dark text-decoration-none'>
-      <CartWidget/>{cart.length}
-    </Link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    
+    <button 
+      className="navbar-toggler" 
+      type="button"
+       data-bs-toggle="collapse" 
+       data-bs-target="#navbarNavDropdown" 
+       aria-controls="navbarNavDropdown" 
+       aria-expanded="false" 
+       aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon "></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+          <Link class="nav-link active" aria-current="page" to="/">
+          Home
+          </Link>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -86,7 +91,10 @@ const {cart} = useContext(CartContext)
   </div>
 
  
-  
+  <Link to="/cart" 
+    className='navbar-link fs-5 text-dark text-decoration-none ms-auto'>
+      <CartWidget/>{cart.length}
+    </Link>
 
 </nav>
 
