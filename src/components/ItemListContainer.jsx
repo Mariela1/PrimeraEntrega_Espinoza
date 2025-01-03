@@ -19,7 +19,6 @@ function ItemListContainer({ greeting }) {
   };
 
   
-  
   return (
     <div className="item-list-container">
       <h2>{greeting}</h2>
@@ -31,7 +30,7 @@ function ItemListContainer({ greeting }) {
         <div class="card-body">
           <h5 class="card-title">Alimento 1</h5>
           <p class="card-text">Descripcion de alimento 1.</p>
-          <a href="#" className="btn btn-primary">Buy!</a>
+          <button onClick={handleAddToCart} className="btn btn-primary">Go to cart!</button>
         </div>
     </div>
     </div>
@@ -41,7 +40,7 @@ function ItemListContainer({ greeting }) {
         <div class="card-body">
           <h5 class="card-title">Alimento 2</h5>
           <p class="card-text">Descripcion de alimento 2.</p>
-          <a href="#" className="btn btn-primary">Buy!</a>
+          <button onClick={handleAddToCart} className="btn btn-primary">Go to cart!</button>
         </div>
     </div>
     </div>
@@ -51,7 +50,7 @@ function ItemListContainer({ greeting }) {
         <div class="card-body">
           <h5 class="card-title">Alimento 3</h5>
           <p class="card-text">Descripcion de alimento 3.</p>
-          <a href="#" className="btn btn-primary">Buy!</a>
+          <button onClick={handleAddToCart} className="btn btn-primary">Go to cart!</button>
         </div>
     </div>
     </div>
@@ -63,7 +62,7 @@ function ItemListContainer({ greeting }) {
         <div class="card-body">
           <h5 class="card-title">Alimento 4</h5>
           <p class="card-text">Descripcion de alimento 4.</p>
-          <a href="#" className="btn btn-primary">Buy!</a>
+          <button onClick={handleAddToCart} className="btn btn-primary">Go to cart!</button>
         </div>
     </div>
     </div>
@@ -73,7 +72,7 @@ function ItemListContainer({ greeting }) {
         <div class="card-body">
           <h5 class="card-title">Alimento 5</h5>
           <p class="card-text">Descripcion de alimento 5.</p>
-          <a href="#" className="btn btn-primary">Buy!</a>
+          <button onClick={handleAddToCart} className="btn btn-primary">Go to cart!</button>
         </div>
     </div>
     </div>
@@ -83,7 +82,7 @@ function ItemListContainer({ greeting }) {
         <div class="card-body">
           <h5 class="card-title">Alimento 6</h5>
           <p class="card-text">Descripcion de alimento 6.</p>
-          <a href="#" className="btn btn-primary">Buy!</a>
+          <button onClick={handleAddToCart} className="btn btn-primary">Go to cart!</button>
         </div>
     </div>
     </div>

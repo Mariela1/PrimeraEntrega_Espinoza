@@ -5,6 +5,7 @@ import { useCart } from './CartContext';
 function CartWidget() {
 
     const { cart } = useCart();
+    
     return (
             
             <div className="cart-widget">

@@ -1,0 +1,49 @@
+
+{
+"products" : [
+        {
+            "id": 1,
+            "nameProduct": "Alimento1",
+            "price": 100,
+            "urlImage":"https://i.ibb.co/WpJvjWW/alimento1.png",
+            "quantity":1
+        },
+        {
+            "id": 2,
+            "nameProduct": "Alimento2",
+            "price": 200,
+            "urlImage":"https://i.ibb.co/pzGHLPv/alimento2.png",
+            "quantity":1
+        },
+        {
+            "id": 3,
+            "nameProduct": "Alimento3",
+            "price": 300,
+            "urlImage":"https://i.ibb.co/jJypRrd/alimento3.png",
+            "quantity":1
+        },
+        {
+            "id": 4,
+            "nameProduct": "Alimento4",
+            "price": 400,
+            "urlImage":"https://i.ibb.co/NSnwkxG/alimento4.png",
+            "quantity":1
+        },
+        {
+            "id": 5,
+            "nameProduct": "Alimento5",
+            "price": 500,
+            "urlImage":"https://i.ibb.co/fQ2Mqcw/alimento5.png",
+            "quantity":1
+        },
+        {
+            "id": 6,
+            "nameProduct": "Alimento6",
+            "price": 600,
+            "urlImage":"https://i.ibb.co/yP4dZQ8/alimento6.png",
+            "quantity":1
+        }
+    ]
+
+}
+    
