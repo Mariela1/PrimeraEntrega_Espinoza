@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import CartWidget from './CartWidget';
 import '../styles/Navbar.css';
 import logo from '../assets/images/logo.PNG'; 
 import { Link } from 'react-router-dom';
+import {CartContext} from '../Features/ContextProvider';
 
-function Navbar() {
-    return (
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+const  Navbar = () => {
+const {cart} = useContext(CartContext)
+  return (
+   
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+
   <div class="container-fluid">
     <Link class="navbar-brand" to="/">
     <img
@@ -17,6 +23,11 @@ function Navbar() {
             className="d-inline-block align-text-top"
           />
         
+    </Link>
+
+    <Link to="/cart" 
+    className='navbar-link fs-5 text-dark text-decoration-none'>
+      <CartWidget/>{cart.length}
     </Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -74,7 +85,14 @@ function Navbar() {
     </div>
   </div>
 
+ 
+  
+
 </nav>
+
+
+
+
     )
 }
 

@@ -1,16 +1,11 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React , {useContext} from 'react';
+import {CartContext} from '../Features/ContextProvider';
+import { Link } from 'react-router-dom';
 
 const Product = ({product}) => {
 
-    const navigate = useNavigate();
-
-    const handleAddToCart = () => {
-        // Aquí puedes manejar la lógica de agregar al carrito si es necesario
-        console.log(`Producto agregado: ${product.nameProduct}`);
-        navigate('/cart'); // Redirige al CartWidget
-    };
     
+    const {dispatch} = useContext(CartContext);
     return (
         <div className="card h-100" style={{width: '18rem'}}>
   <img src={product.urlImage} className="card-img-top h-75" alt={product.nameProduct}/>
@@ -20,9 +15,11 @@ const Product = ({product}) => {
     <p class="card-text">
         {product.description}
     </p>
-    <button className="btn btn-primary" onClick={handleAddToCart}>
+    
+    <Link to="/cart" className="btn btn-primary" onClick={() => dispatch({type: "Add", product: product})}>
         Add To Cart
-    </button>
+    </Link>
+    
   </div>
 </div>
     );
